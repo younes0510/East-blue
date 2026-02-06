@@ -1,0 +1,1040 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  width: 100%;
+ 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+nav .logo {
+  height: 70px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: auto;
+}
+nav ul li {
+  position: relative;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  padding: 20px 2px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+nav ul li a:hover {
+  width: 100%;
+}
+
+.has-sounav .sounav {
+   
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  list-style: none;
+  margin-top: 10px;
+  padding: 15px 20px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 10;
+
+
+  
+}
+.sounav{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 50px;
+    
+   
+}
+
+.has-sounav:hover .sounav {
+  opacity: 1;
+  visibility: visible;
+  
+}
+
+
+.sounav li a {
+  
+  font-size: 15px;
+  color: #111;
+  transition: all 0.2s ease;
+
+}
+
+.sounav li a:hover {
+  text-decoration: underline;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.icons svg {
+  width: 27px;
+  height: 27px;
+  color: #111;
+  cursor: pointer;
+}
+.menu-toggle {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu-btn svg {
+  width: 27px;
+  height: 27px;
+  color: #111;
+}
+.icons svg:hover {
+  transform: translateY(-1px);
+}
+
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  width: 180px;
+  height: 34px;
+  padding: 0 36px 0 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 20px;
+  outline: none;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+.search input:focus {
+  box-shadow: 0 0 0 3px rgba(2, 2, 4, 0.15);
+}
+
+#sear {
+  position: absolute;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+  color: #666;
+  pointer-events: none;
+}
+iframe {
+  display: block;
+  border: none;
+  width: 100%;
+}
+
+.offres {
+  margin: 20px 60px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.offre {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 800px;
+ 
+}
+
+
+
+.offre img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.offre .info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 60%, transparent 100%);
+  padding: 40px 20px 20px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+
+
+.offre .info h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+.offre .info p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+  font-family: "Poppins", sans-serif;
+}
+
+.offre button {
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+ 
+  font-family: "Poppins", sans-serif;
+}
+
+.offre button:hover {
+  background: #000000;
+    color: #ffffff;
+}
+
+.article {
+  margin: 50px 0;
+  padding: 30px 60px;
+}
+
+.article h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #E63946;
+}
+
+.carousel-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background: #E63946;
+  border-radius: 10px;
+}
+
+.article-card {
+    width: 350px;
+    height: 450px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+ 
+  scroll-snap-align: start;
+  flex-shrink:0;
+}
+.article-card:hover {
+ cursor: pointer;
+ border: #000000 1px solid;
+}
+
+
+
+.article-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.article-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.article-card .prix {
+  font-size: 24px;
+  font-weight: 700;
+  color: #E63946;
+  margin: 0 15px 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.article-card svg {
+    position: absolute;
+  width: 24px;
+  height: 24px;
+  color: #111;
+  cursor: pointer;
+    top: 15px;
+    right: 15px;
+
+}
+.article-card svg:hover {
+  color: #E63946;
+}
+
+
+
+
+.galleri {
+  margin: 50px 0;
+  padding: 30px 60px;
+ 
+}
+
+.galleri h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #E63946;
+}
+
+.gallery-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 15px;
+  scroll-snap-type: x mandatory;
+  
+}
+
+.gallery-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.gallery-carousel::-webkit-scrollbar-track {
+  
+  border-radius: 10px;
+}
+
+.gallery-carousel::-webkit-scrollbar-thumb {
+  background: #FFC93C;
+  border-radius: 10px;
+}
+
+.sport-category {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  width: 350px;
+  height: 400px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.gallery-carousel:hover > :not(:hover) {
+  opacity: 0.1;
+  
+}
+
+.sport-category:hover {
+  transform: scale(1.1);
+  filter: grayscale(0);
+}
+
+.sport-category img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+
+
+.sport-category .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 40%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sport-category:hover .overlay {
+  opacity: 1;
+}
+
+.sport-category .overlay h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+.newsletter {
+  background: #E63946;
+  color: #FFFFFF;
+  padding: 40px 20px;
+  text-align: center;
+  margin: 50px 60px;
+  border-radius: 15px;
+}
+.newsletter h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
+}
+.newsletter p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  font-family: "Poppins", sans-serif;
+}
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.newsletter input[type="email"] {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 25px;
+  width: 300px;
+  font-size: 14px;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+.newsletter button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #FFFFFF;
+  color: #E63946;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+.marques h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #E63946;
+}
+.marques-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 30px 0;
+  margin: 0 60px;
+}
+.marques-logos img {
+  height: 50px;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+
+footer {
+  background: #000000;
+  color: #FFFFFF;
+  padding: 50px 0 0;
+  margin-top: 60px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 0 60px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-section h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.footer-section h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #FFC93C;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-section p {
+  font-size: 14px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-section ul li a:hover {
+  color: #007BFF;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons svg {
+  width: 24px;
+  height: 24px;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-icons svg:hover {
+  color: #007BFF;
+  transform: translateY(-3px);
+}
+
+.color-chart .color-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.color-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.color-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.color-item span {
+  font-size: 12px;
+  color: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-bottom {
+  background: #E63946;
+  padding: 20px;
+  text-align: center;
+  border-top: 3px solid #FFC93C;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+  color: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+}
+
+.offres-section {
+  margin: 50px  60px;
+  padding: 30px 0;
+}
+
+.offres-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #E63946;
+}
+
+.offres-carousel {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.offres-track {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  animation: slide 20s infinite ease-in-out;
+}
+
+.offre-card {
+  width: 25%;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.offre-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+
+
+.offre-card .paragraph {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 60%, transparent 100%);
+  padding: 40px 30px 30px;
+  color: #fff;
+}
+
+.offre-card .paragraph h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  color: #FFFFFF;
+}
+
+.offre-card .paragraph p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+  font-family: "Poppins", sans-serif;
+}
+
+.offre-card button {
+  background: #E63946;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.offre-card button:hover {
+  background: #007BFF;
+  transform: scale(1.05);
+}
+
+@keyframes slide {
+  0%   { transform: translateX(0%); }
+  20%  { transform: translateX(0%); }
+
+  25%  { transform: translateX(-25%); }
+  45%  { transform: translateX(-25%); }
+
+  50%  { transform: translateX(-50%); }
+  70%  { transform: translateX(-50%); }
+
+  75%  { transform: translateX(-75%); }
+  95%  { transform: translateX(-75%); }
+
+  100% { transform: translateX(0%); }
+}
+
+
+@media screen and (max-width: 834px) {
+   nav {
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    padding: 10px 15px;
+    position: relative;
+  }
+
+  nav .logo {
+    height: 60px;
+  }
+
+  nav ul {
+    display: none;
+  }
+  .menu-btn {
+    display: flex;
+  }
+
+  .menu-toggle:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 12px;
+    right: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    z-index: 20;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+    padding: 10px 2px;
+  }
+.sounav{
+    display: none;
+}
+ 
+
+  .icons {
+    gap: 50px;
+  }
+
+  .search  {
+    margin: 0 25px;
+    width: 150px;
+  }
+
+  .offres {
+    margin: 20px 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .offre {
+    height: 520px;
+  }
+
+  
+
+  
+
+  .article {
+    padding: 25px 20px;
+  }
+
+  .article h2,
+  .galleri h2,
+  .marques h2 {
+    font-size: 26px;
+  }
+
+  .carousel-container {
+    gap: 16px;
+  }
+
+  .article-card {
+    width: 300px;
+    height: 400px;
+  }
+
+  .article-card img {
+    height: 280px;
+  }
+
+  .offres-section {
+    margin: 30px 20px;
+    padding: 20px 0;
+  }
+
+  .offres-section h2 {
+    font-size: 26px;
+  }
+
+  .offres-carousel {
+    height: 420px;
+  }
+
+  .offre-card .paragraph {
+    padding: 30px 20px 20px;
+  }
+
+  .offre-card .paragraph h1 {
+    font-size: 24px;
+  }
+
+  .offre-card .paragraph p {
+    font-size: 14px;
+  }
+
+  .galleri {
+    padding: 25px 20px;
+  }
+
+  .gallery-carousel {
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .gallery-item {
+    width: 320px;
+    height: 360px;
+  }
+
+  .newsletter {
+    margin: 40px 20px;
+    padding: 35px 20px;
+  }
+
+  .newsletter input[type="email"] {
+    width: 260px;
+  }
+
+  .marques-logos {
+    margin: 0 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px 30px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 8px 10px;
+    position: relative;
+  }
+
+  nav .logo {
+    height: 50px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  .menu-toggle:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 12px;
+    right: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    z-index: 20;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  nav ul li a {
+    display: block;
+    font-size: 16px;
+    padding: 12px 6px;
+  }
+
+  .sounav {
+    display: none;
+  }
+
+  .icons {
+    gap: 12px;
+  }
+
+  .search {
+    display: none;
+  }
+
+  
+  .offres {
+    margin: 20px 12px;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .offre {
+    min-height: 380px;
+    height: auto;
+  }
+
+  .article {
+    padding: 20px 12px;
+    margin: 20px 0;
+  }
+
+  .article h2,
+  .galleri h2,
+  .marques h2 {
+    font-size: 22px;
+  }
+
+  .carousel-container {
+    gap: 12px;
+    padding: 12px 0;
+  }
+
+  .article-card {
+    width: 260px;
+    height: 360px;
+  }
+
+  .article-card img {
+    height: 240px;
+  }
+
+  .article-card .prix {
+    font-size: 18px;
+  }
+
+  .offres-section {
+    margin: 20px 12px;
+    padding: 15px 0;
+  }
+
+  .offres-section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .offres-carousel {
+    height: 350px;
+  }
+
+  .offre-card .paragraph {
+    padding: 20px 15px 15px;
+  }
+
+  .offre-card .paragraph h1 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .offre-card .paragraph p {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+
+  .offre-card button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+ 
+  .galleri {
+    padding: 20px 12px;
+  }
+
+  .gallery-carousel {
+    padding: 12px;
+  }
+
+  .gallery-item {
+    width: 280px;
+    height: 320px;
+  }
+
+ 
+  .newsletter {
+    margin: 30px 12px;
+    padding: 30px 15px;
+  }
+
+  .newsletter h2 {
+    font-size: 22px;
+  }
+
+  .newsletter form {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .newsletter input[type="email"] {
+    width: 100%;
+  }
+
+  
+  .marques-logos {
+    margin: 0 12px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .marques-logos img {
+    height: 36px;
+  }
+
+ 
+  .footer-container {
+    grid-template-columns: 1fr;
+    padding: 0 16px 30px;
+  }
+
+  .footer-section h3 {
+    font-size: 22px;
+  }
+
+  .footer-section h4 {
+    font-size: 16px;
+  }
+}

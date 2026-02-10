@@ -301,7 +301,7 @@ footer {
   color: #FFFFFF;
   font-family: "Poppins", sans-serif;
 }
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 884px) {
      nav {
     flex-direction: row;
     justify-content: center;

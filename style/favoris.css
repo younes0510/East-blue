@@ -306,3 +306,39 @@ h1 {
 .container ul li {
     margin-bottom: 8px;
 }
+
+
+@media screen and (max-width: 440px) {
+  .livraison {
+    padding: 15px 10px;
+  }
+
+  .livraison h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .livraison h2 {
+    font-size: 18px;
+    margin: 15px 0;
+  }
+
+  .livraison p, .livraison ul {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 20px;
+    margin: 15px;
+  }
+
+  .faq {
+    padding: 20px;
+    margin: 15px;
+  }
+  .retour {
+    padding: 20px;
+    margin: 15px;
+  }
+  
+}

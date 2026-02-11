@@ -120,7 +120,7 @@ iframe {
     width: 350px;
     height: 450px;
   background: #fff;
-  position: relative;
+  
   overflow: hidden;
  
   scroll-snap-align: start;
@@ -154,19 +154,6 @@ iframe {
   font-family: "Poppins", sans-serif;
 }
 
-.article-card svg {
-    position: absolute;
-  width: 24px;
-  height: 24px;
-  color: #111;
-  cursor: pointer;
-    top: 15px;
-    right: 15px;
-
-}
-.article-card svg:hover {
-  color: #E63946;
-}
 
 
 

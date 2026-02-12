@@ -1,0 +1,106 @@
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+}
+
+
+.sport-img {
+    display: flex;
+   
+}
+.sport-img img {
+    width: 50%;
+    height: 120vh;
+    object-fit: cover;
+}
+
+.titr-page {
+    font-size: 36px;
+    color: #111;
+    font-weight: 400;
+    margin:  50px;
+    text-align: center;
+}
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin: 0 50px;
+}
+
+
+.article {
+   
+    padding: 0px;
+    width: 100%;
+    border-radius: 8px;
+    text-align: start;
+    
+
+}
+
+
+
+.article img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    
+}
+.article h2 {
+    font-size: 22px;
+    color: #111;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    margin: 8px 0;
+    
+}
+.article .der-srt {
+    font-size: 22px;
+    color: #E63946;
+    margin-bottom: 12px;
+    font-family: "Poppins", sans-serif;
+}
+
+.article h3 {
+    font-size: 15px;
+    color: #111;
+   
+    font-family: "Poppins", sans-serif;
+    font-weight:200;
+}
+
+.article .prix {
+    font-size: 20px;
+    color: #E63946;
+    font-weight: 700;
+    margin: 8px 0;
+    font-family: "Poppins", sans-serif;
+}
+
+@media screen and (max-width: 884px) {
+    .articles-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    
+}
+@media screen and (max-width: 440px) {
+    .sport-img {
+        flex-direction: column;
+    }
+    .sport-img img {
+        width: 100%;
+        height: auto;
+    }
+     .titr-page {
+        font-size: 24px;
+        margin: 20px;
+    }
+    
+    .articles-container {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,380 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+
+.hdr-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative; 
+}
+.hdr-img h1{
+    position: absolute;
+    top: 40%;
+    margin: 0 30px ;
+    font-size: 36px;
+    color: #fff;
+}
+
+
+
+
+
+.articles { 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 50px 30px;
+   transform: translateY(-100px);
+}
+
+.article {
+   
+    border-radius: 12px;
+   
+    cursor: pointer;
+}
+
+
+
+.article img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+   
+}
+
+
+
+.article h2 {
+    font-size: 18px;
+    color: #111;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    margin: 12px 15px 8px 15px;
+}
+
+.article  {
+    font-size: 14px;
+    color: #E63946;
+    margin: 12px 15px 8px 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.article h3 {
+    font-size: 14px;
+    color: #666;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    margin: 4px 15px;
+}
+
+.article .prix {
+    font-size: 20px;
+    color: #E63946;
+    font-weight: 700;
+    margin: 12px 15px 15px 15px;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+.putellias{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.putellias-titre{
+    transform: translateY(-250px);
+    padding: 30px;
+}
+
+
+.putellias-titre h1{
+    font-size: 32px;
+    letter-spacing: 3px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.putellias-titre p{
+    font-size: 18px;
+    color: #fff;
+    font-weight: 300;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.putellias-titre button{
+    padding: 12px 24px;
+    background-color: #E63946;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.putellias-titre button:hover{
+    background-color: #c92a35;
+}
+
+.putellias-titre button a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.trouve-ta-paire{
+    padding: 0 40px;
+    
+    margin: 0 auto;
+    background: #fff;
+}
+    
+
+.trouve-ta-paire h1{
+    font-size: 32px;
+    color: #111;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.trouve-ta-paire p{
+    font-size: 18px;
+    color: #666;
+    font-weight: 300;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.paire-article{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.paire{
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.paire:hover{
+    transform: translateY(-8px);
+}
+
+.paire img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.paire h2{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    font-size: 22px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px 20px;
+    border-radius: 8px;
+} 
+
+
+@media screen and (max-width: 884px) {
+    .hdr-img h1{
+        font-size: 28px;
+        margin: 0 20px;
+    }
+
+    .articles{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 40px 20px;
+        transform: translateY(-60px);
+    }
+
+    .article img{
+        height: 250px;
+    }
+
+    .article h2{
+        font-size: 16px;
+    }
+
+    .article{
+        font-size: 12px;
+    }
+.putellias  {
+        height: 600px;
+    }
+    .putellias-titre{
+        transform: translateY(-300px);
+        padding: 20px;
+        max-width: 500px;
+    }
+
+    .putellias-titre h1{
+        font-size: 26px;
+        letter-spacing: 2px;
+    }
+
+    .putellias-titre p{
+        font-size: 16px;
+    }
+
+    .putellias-titre button{
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .trouve-ta-paire{
+        padding: 0 100px;
+    }
+
+    .trouve-ta-paire h1{
+        font-size: 28px;
+    }
+
+    .trouve-ta-paire p{
+        font-size: 16px;
+    }
+
+    .paire-article{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        
+    }
+
+    .paire img{
+        height: 350px;
+    }
+
+    .paire h2{
+        font-size: 18px;
+    }
+}
+
+
+@media screen and (max-width: 440px){
+    .hdr-img h1{
+        font-size: 20px;
+        margin: 0 15px;
+        top: 35%;
+    }
+    .hdr-img img{
+        height: 300px;
+    }
+
+    .articles{
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 30px 15px;
+        transform: translateY(-50px);
+    }
+
+    .article img{
+        height: 220px;
+    }
+
+    .article h2{
+        font-size: 15px;
+        margin: 10px 12px 6px 12px;
+    }
+
+    .article{
+        font-size: 11px;
+        margin: 10px 12px 6px 12px;
+    }
+
+    .article h3{
+        font-size: 12px;
+        margin: 4px 12px;
+    }
+
+    .article .prix{
+        font-size: 16px;
+        margin: 10px 12px 12px 12px;
+    }
+
+    .putellias  {
+        height: 500px;
+    }
+
+    .putellias-titre{
+        transform: translateY(-190px);
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .putellias-titre h1{
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    .putellias-titre p{
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+    .putellias-titre button{
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .trouve-ta-paire{
+        padding: 0 15px;
+    }
+
+    .trouve-ta-paire h1{
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .trouve-ta-paire p{
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .paire-article{
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .paire img{
+        height: 250px;
+    }
+
+    .paire h2{
+        font-size: 16px;
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+        padding: 10px 12px;
+    }
+}
+
+
+
+
